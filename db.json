@@ -1,0 +1,32 @@
+{
+  "baju": [
+    {
+      "id": "fa25",
+      "nama": "FHELIA",
+      "ukuran": "M",
+      "harga": 150000
+    }
+  ],
+  "pelanggan": [
+    {
+      "id": 1751617671349,
+      "nama": "DELA",
+      "email": "delaazahra@student.uir.ac.id",
+      "telepon": "1212",
+      "alamat": "Jl. Merdeka No. 123, Jakarta",
+      "gender": "Wanita",
+      "status": "Aktif"
+    }
+  ],
+  "order": [
+    {
+      "id": 1751617564514,
+      "namaPemesan": "TERE",
+      "namaBaju": "BATIK ",
+      "ukuran": "L",
+      "noHp": "022231231",
+      "status": "Lunas",
+      "tanggal": "2025-07-04"
+    }
+  ]
+}
