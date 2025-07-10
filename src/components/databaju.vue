@@ -110,7 +110,7 @@ const editIndex = ref(null)
 
 async function fetchBajuData() {
   try {
-    const response = await fetch('https://web-hostingan.vercel.app//baju')
+    const response = await fetch('https://web-hostingan.vercel.app/baju')
     const data = await response.json()
     daftarBaju.value = data
   } catch (error) {
@@ -122,7 +122,7 @@ async function fetchBajuData() {
 async function tambahBaju() {
   if (form.value.nama && form.value.ukuran && form.value.harga) {
     try {
-      const response = await fetch('https://web-hostingan.vercel.app//baju', {
+      const response = await fetch('https://web-hostingan.vercel.app/baju', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -159,7 +159,7 @@ async function editBaju(id) {
 async function updateBaju() {
   if (editIndex.value !== null) {
     try {
-      const response = await fetch(`https://web-hostingan.vercel.app//baju/${editIndex.value}`, {
+      const response = await fetch(`https://web-hostingan.vercel.app/baju/${editIndex.value}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -188,7 +188,7 @@ async function updateBaju() {
 async function hapusBaju(id) {
   if (confirm('Apakah Anda yakin ingin menghapus baju ini?')) {
     try {
-      const response = await fetch(`https://web-hostingan.vercel.app//baju/${id}`, {
+      const response = await fetch(`https://web-hostingan.vercel.app/baju/${id}`, {
         method: 'DELETE'
       })
 
