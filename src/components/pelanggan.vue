@@ -165,7 +165,7 @@ export default {
         ...this.form,
         id: Date.now()
       };
-      fetch('https://tokobajudela.glitch.me/pelanggan', {
+      fetch('https://web-hostingan.vercel.app//pelanggan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newPelanggan)
@@ -192,7 +192,7 @@ export default {
         alert("ID pelanggan tidak ditemukan.");
         return;
       }
-      fetch(`https://tokobajudela.glitch.me/pelanggan/${this.currentEditingId}`, {
+      fetch(`https://web-hostingan.vercel.app//pelanggan/${this.currentEditingId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(this.form)
@@ -217,7 +217,7 @@ export default {
         alert("ID pelanggan tidak ditemukan.");
         return;
       }
-      fetch(`https://tokobajudela.glitch.me/pelanggan/${this.pelangganToDeleteId}`, {
+      fetch(`https://web-hostingan.vercel.app//pelanggan/${this.pelangganToDeleteId}`, {
         method: 'DELETE'
       })
         .then(res => {

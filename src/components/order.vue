@@ -145,7 +145,7 @@ const currentOrderId = ref(null);
 
 const fetchOrder = async () => {
   try {
-    const response = await fetch('https://tokobajudela.glitch.me/order');
+    const response = await fetch('https://web-hostingan.vercel.app//order');
     const data = await response.json();
     orderList.value = data;
   } catch (error) {
@@ -158,7 +158,7 @@ const submitOrder = async () => {
   if (form.value.namaPemesan && form.value.namaBaju && form.value.ukuran && form.value.noHp) {
     try {
       const id = Date.now();
-      const response = await fetch('https://tokobajudela.glitch.me/order', {
+      const response = await fetch('https://web-hostingan.vercel.app//order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -195,7 +195,7 @@ const editOrder = (order) => {
 const updateOrder = async () => {
   if (currentOrderId.value != null) {
     try {
-      const response = await fetch(`https://tokobajudela.glitch.me/order/${currentOrderId.value}`, {
+      const response = await fetch(`https://web-hostingan.vercel.app//order/${currentOrderId.value}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -227,7 +227,7 @@ const hapusOrder = async (id) => {
   if (!confirmDelete) return;
 
   try {
-    const response = await fetch(`https://tokobajudela.glitch.me/order/${id}`, {
+    const response = await fetch(`https://web-hostingan.vercel.app//order/${id}`, {
       method: 'DELETE'
     });
 
